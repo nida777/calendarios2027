@@ -4,6 +4,11 @@ Site em português com os 12 meses de 2027, feriados nacionais brasileiros,
 datas comemorativas móveis, visualização mensal e impressão em papel ou PDF.
 Não exige cadastro, backend, banco de dados ou chaves de API.
 
+A página inicial organiza o conteúdo em três módulos: calendários, impressão
+e feriados. O visual usa fundo rosa, cartões com capas de papel e as fontes
+locais Nunito e Playfair Display. As licenças SIL OFL e a procedência das fontes
+estão em `public/fonts/`.
+
 ## Desenvolvimento
 
 Use Node.js 24 e npm:
