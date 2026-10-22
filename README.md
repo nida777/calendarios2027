@@ -23,12 +23,27 @@ npm run preview
 O build estático é gerado em `dist/`. Caminhos relativos permitem hospedar
 o site tanto na raiz de um domínio quanto em `/calendarios2027/`.
 
-## Publicação no GitHub Pages
+## Publicação na Netlify
 
-O workflow `.github/workflows/pages.yml` testa, compila e publica o site quando
-há um push para `main`. Nas configurações do repositório, em **Pages**, a origem
-de publicação deve ser **GitHub Actions**. A publicação requer permissão para
-configurar Pages e executar os workflows no repositório.
+O arquivo `netlify.toml` configura Node.js 24, o comando `npm run build`
+e a pasta pública `dist`. Na Netlify, importe o repositório
+`nida777/calendarios2027` e selecione a branch `main`.
+
+Para publicar um build pronto usando a CLI autenticada:
+
+```sh
+netlify deploy --dir=dist --prod --no-build
+```
+
+As credenciais da Netlify devem ser fornecidas pelas configurações seguras do
+ambiente ou pelo login da CLI; nunca pelo código-fonte.
+
+## Publicação alternativa no GitHub Pages
+
+O workflow `.github/workflows/pages.yml` permite uma publicação manual pelo
+GitHub Actions, caso essa alternativa seja desejada. Nas configurações do
+repositório, em **Pages**, a origem deve ser **GitHub Actions**. A publicação
+requer permissão para configurar Pages e executar os workflows no repositório.
 
 ## Datas
 
